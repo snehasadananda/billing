@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.local
+*.log
+dist/
+build/
+backups/
+*.sql.gz
+*.zip
+.DS_Store
+.vscode/

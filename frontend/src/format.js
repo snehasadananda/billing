@@ -1,0 +1,10 @@
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+export const inr = (v) => `₹${Number(v || 0).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+export const inr0 = (v) => `₹${Number(v || 0).toLocaleString('en-IN', { maximumFractionDigits: 0 })}`;
+export const fdate = (s) => { if (!s) return '-'; const [y, m, d] = String(s).slice(0, 10).split('-'); return `${d}-${MON[Number(m) - 1]}-${y}`; };
+export const todayStr = () => new Date().toLocaleDateString('en-CA');
+export const label = (s) => String(s || '').replace(/_/g, ' ');
+export const PAYMENT_METHODS = ['CASH', 'BANK_TRANSFER', 'UPI', 'CHEQUE', 'CARD', 'PAYMENT_GATEWAY', 'OTHER'];
+export const TERMS = [[0, 'Immediate'], [7, '7 Days'], [15, '15 Days'], [30, '30 Days'], [45, '45 Days'], [60, '60 Days']];
+export const PERIODS = [['today', 'Today'], ['this_week', 'This Week'], ['this_month', 'This Month'], ['prev_month', 'Previous Month'], ['this_quarter', 'This Quarter'], ['this_fy', 'This Financial Year'], ['prev_fy', 'Previous Financial Year'], ['this_year', 'This Calendar Year'], ['custom', 'Custom Range']];
+export const STATES = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'];
